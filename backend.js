@@ -1,0 +1,25 @@
+fetchData()
+async function fetchData(){
+    try{
+        const art_id = document.getElementById("id").value;
+        const response = await fetch(`https://api.artic.edu/api/v1/artworks/${art_id}`)
+        if(!response.ok){
+            throw new Error ("Could not fetch resource")
+        }
+        const data = await response.json()
+        const image_id = data.image_id
+        const image_url = `https://www.artic.edu/iiif/2/${image_id}/full/843,/0/default.jpg`
+        const image_element = document.getElementById("art_image")
+        image_element.src = image_url
+        image_element.style.display = "block"
+        const title = data.title
+        const title_element = document.getElementById("art_title")
+        title_element.innerHTML = title
+        const artist = data.artist_title
+        const artist_element = document.getElementById("artist_name")
+        artist_element.innerHTML = artist
+    }
+    catch(error){
+        console.error(error)
+    }
+}
