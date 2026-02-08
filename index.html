@@ -1,14 +1,26 @@
-<div>
-    <div>
-        <h1>Art Search</h1>
-    </div>
+<!DOCTYPE html>
+<html lang = "en"/>
+<head>
+    <meta charset = "UTF-8"/>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
+    <title>Art Search</title>
+    <script src = "backend.js"></script>
+</head>
+<header>
+    <h1>Art Search</h1>
+</header>
+<body>
     <div>
         <input type = "text" id = "art_id" placeholder = "MMDDYY">What's Your Birthday</input>
-        <button onClick = {() => fetchData()}>Get Art</button>
+        <button onClick = "fetchData()">Get Art</button>
         <br></br>
         <img src = "" id= "art_image" style = "display:none"></img>
         <h3 id = "art_title"></h3>
         <h4 id = "artist_name"></h4>
-        <p></p>
+        <p id = "art_description"></p>
     </div>
-</div>
+    <div>
+        <button onClick = "fetchData()">Get Random Art</button>
+    </div>
+</body>
+</html>
