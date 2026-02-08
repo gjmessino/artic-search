@@ -1,7 +1,12 @@
-fetchData()
 async function fetchData(){
     try{
-        const art_id = document.getElementById("id").value;
+        let art_id;
+        if(!art_id){
+            art_id = Math.floor(Math.random() * 10000)
+        }
+        else {
+            art_id = document.getElementById("art_id").value;
+        }
         const response = await fetch(`https://api.artic.edu/api/v1/artworks/${art_id}`)
         if(!response.ok){
             throw new Error ("Could not fetch resource")
@@ -26,3 +31,4 @@ async function fetchData(){
         console.error(error)
     }
 }
+
