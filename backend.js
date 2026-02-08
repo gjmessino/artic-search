@@ -5,7 +5,7 @@ async function fetchData(){
             art_id = Math.floor(Math.random() * 10000)
         }
         else {
-            art_id = document.getElementById("art_id").value;
+            parseInt(art_id = document.getElementById("art_id").value);
         }
         const response = await fetch(`https://api.artic.edu/api/v1/artworks/${art_id}`)
         if(!response.ok){
