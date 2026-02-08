@@ -18,6 +18,9 @@ async function fetchData(){
         const artist = data.artist_title
         const artist_element = document.getElementById("artist_name")
         artist_element.innerHTML = artist
+        const description = data.thumbnail.alt_text
+        const description_element = document.getElementById("art_description")
+        description_element.innerHTML = description
     }
     catch(error){
         console.error(error)
