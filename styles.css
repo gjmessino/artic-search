@@ -1,18 +1,57 @@
-head{
-    background-color: "lightblue";
-}
-body {
-    color: "blue";
+header{
+    background: rgb(246, 141, 103);
 }
 button {
-    background-color: "pink";
     text-align: "center";
+    font-size: 20px;
+    color:rgb(77, 77, 77);
 }
-h3,h4 {
-    font-family: "Oswald";
+body{
+    background-color: "white";
+    align-items: center;
+}
+input{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-align: center;
+    text-align: center;
+    font-size: 20px;
+}
+h1 {
+    font-family: "Oswald", sans-serif;
     font-weight: bold;
+    text-align: "center";
+    font-size: 100px;
+    color: rgb(77, 77, 77)
+}
+h2,h4 {
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(246, 141, 103);
 }
 p{
-    font-family: "Oswald";
-    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+    color: rgb(77, 77, 77)
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-align: center;
+    outline: solid 5px rgb(77, 77, 77);;
+}
+#button_box{
+    height: 100px;
+    width: 400px;
+    outline: auto;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.rectangle {
+    display: flex;
+    justify-content: space-evenly;
 }
