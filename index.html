@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html lang = "en"/>
+<html lang = "en">
 <head>
     <meta charset = "UTF-8"/>
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
     <title>Art Search</title>
     <script src = "backend.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href= "styles.css">
 </head>
 <header>
     <h1>Art Search</h1>
 </header>
 <body>
-    <div>
-        <input type = "text" id = "art_id" placeholder = "MMDDYY">What's Your Birthday</input>
-        <button onClick = "fetchData()">Get Art</button>
-        <br></br>
-        <img src = "" id= "art_image" style = "display:none"></img>
-        <h3 id = "art_title"></h3>
-        <h4 id = "artist_name"></h4>
-        <p id = "art_description"></p>
+    <div id="button_box">
+        <input type = "number" id = "art_id" placeholder="MMDDYY"></input> <br>
+        <div class = "rectangle">
+            <button onClick = "checkInput()">Get Birthday Art</button><br>
+            <button onClick = "fetchData()">Get Random Art</button> <br>
+        </div>
     </div>
     <div>
-        <button onClick = "fetchData()">Get Random Art</button>
+        <br>
+        <img src = "" id= "art_image" style = "display:none"></img> <br>
+        <h2 id = "art_title"></h2><br>
+        <h4 id = "artist_name"></h4><br>
+        <p id = "art_description"></p><br>
     </div>
 </body>
 </html>
